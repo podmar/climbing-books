@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Home from '../views/Home.js';
 import Detail from '../views/Detail.js';
 import LogIn from '../views/LogIn.js';
@@ -10,6 +10,14 @@ import ErrorPage from '../views/ErrorPage.js';
 function App() {
   return (
     <>
+      <nav>
+        <Link to="/"> Home </Link>
+        <Link to="detail"> Detail </Link>
+        <Link to="login"> Log in </Link>
+        <Link to="chatroom"> Chatroom </Link>
+        <Link to="data"> Data </Link>
+      </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="detail" element={<Detail />} />
@@ -18,6 +26,7 @@ function App() {
         <Route path="data" element={<Data />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <footer>Copyright info</footer>
     </>
   )
 }

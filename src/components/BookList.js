@@ -9,12 +9,10 @@ function BookList() {
 
     const fetchBooks = async () => {
         try {
-            console.log(url);
             const response = await fetch(url);
             const bookData = await response.json();
             const bookList = await bookData.items;
             setBooks(bookList);
-            console.log(books, bookList);
         } catch (err) {
             console.log(err);
         };

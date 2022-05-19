@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import data from '../config.json'
+import SeeDetailButton from './SeeDetailButton';
 
 function BookList() {
     const url = "https://www.googleapis.com/books/v1/volumes?q=climbing&key="+data.API_KEY;
@@ -28,7 +29,11 @@ function BookList() {
     <div>
         {books.map(book => { 
             return (
-                <div>{book.volumeInfo.title}</div>
+                <div>
+                    {book.volumeInfo.title} 
+                    <SeeDetailButton id={book.id} />
+                </div>
+
             )
         }
         )}

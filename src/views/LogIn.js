@@ -1,8 +1,12 @@
 import React from 'react'
+import GoToButton from '../components/GoToButton'
 
 function LogIn() {
   return (
-    <div>LogIn</div>
+    <>
+      <div>Log In</div>
+      <GoToButton path="/detail" element="detail page" />
+    </>
   )
 }
 

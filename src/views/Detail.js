@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../config.json';
 
 function Detail() {
-  const [book, setBook] = useState([]);
+  const [book, setBook] = useState();
   let { bookid } = useParams();
   console.log(bookid)
 
@@ -36,11 +36,7 @@ console.log(url)
     <div>    
       <h1>Detail</h1>
       <p>Welcome to the detail view.</p>
-      {/* {console.log(book.volumeInfo.title)} */}
-      {book &&  <p>{ book.volumeInfo.title }</p> }
-      {/* <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p> */}
-      {/* <p>{ book.volumeInfo.title }</p> */}
-      {/* <p>{`this is the book ${ book.volumeInfo.title }`}</p> */}
+      {book &&  <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p> }
     </div>
 
     <div>

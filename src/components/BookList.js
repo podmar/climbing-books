@@ -27,7 +27,9 @@ function BookList() {
     <div>
         {books.map(book => { 
             return (
-                <div>
+                <div
+                key={book.id}
+                >
                     {book.volumeInfo.title} 
                     <SeeDetailButton id={book.id} />
                 </div>

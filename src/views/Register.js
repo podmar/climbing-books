@@ -1,13 +1,13 @@
 import React from 'react'
 import GoToButton from '../components/GoToButton'
 
-function LogIn() {
+function Register() {
   return (
     <>
-      <div>Log In</div>
+      <div>Register</div>
       <GoToButton path="/detail" element="detail page" />
     </>
   )
 }
 
-export default LogIn
+export default Register

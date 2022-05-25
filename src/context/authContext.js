@@ -1,12 +1,13 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const AuthContext = createContext();
 
 export const AuthContextProvider = (props) => {
-// space for the context provider: state and function
+    const [uset, setUser] = useState(null)
+    
     return (
         <AuthContext.Provider
-        value={}
+        value={ {user, setUser} }
         >
             {props.children}
         </AuthContext.Provider>

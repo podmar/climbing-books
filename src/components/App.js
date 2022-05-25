@@ -6,7 +6,7 @@ import Register from '../views/Register.js';
 import ChatRoom from '../views/ChatRoom.js';
 import Data from '../views/Data.js';
 import ErrorPage from '../views/ErrorPage.js';
-import { Button } from 'bootstrap';
+import { Button } from 'react-bootstrap';
 
 function App() {
   const login = () => {
@@ -18,7 +18,7 @@ function App() {
       <nav>
         <Link to="/"> Home </Link>
         <Link to="detail"> Detail </Link>
-        <Link to="register"> Log in </Link>
+        <Link to="register"> Register </Link>
         <Link to="chatroom"> Chatroom </Link>
         <Link to="data"> Data </Link>
         <Button variant="info" onClick={login}>Login</Button>

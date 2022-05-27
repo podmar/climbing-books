@@ -10,6 +10,12 @@ function Nav() {
         setUser({ userName: "Marta" })
         console.log(user)
     }
+
+    const logout = () => {
+        setUser(null)
+        console.log(user)
+    }
+
   return (
     <>
         <nav>
@@ -18,7 +24,10 @@ function Nav() {
           <Link to="register"> Register </Link>
           <Link to="chatroom"> Chatroom </Link>
           <Link to="data"> Data </Link>
-          <Button variant="info" onClick={login}>Login</Button>
+          { user ? 
+          <Button onClick={logout}>Logout</Button> :
+          <Button onClick={login}>Login</Button>
+          }
         </nav>
     </>
   )

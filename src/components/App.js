@@ -8,18 +8,18 @@ import Data from '../views/Data.js';
 import ErrorPage from '../views/ErrorPage.js';
 import Nav from './Nav.js';
 import { AuthContextProvider } from '../context/AuthContext';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   return (
     <>
       <AuthContextProvider>
         <Nav />
-
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="detail/:bookid" element={<Detail />} />
+          <Route path="detail/:bookid" element={<ProtectedRoute><Detail /></ProtectedRoute>} />
           <Route path="register" element={<Register />} />
-          <Route path="chatroom" element={<ChatRoom />} />
+          <Route path="chatroom" element={<ProtectedRoute><ChatRoom /></ProtectedRoute>} />
           <Route path="data" element={<Data />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

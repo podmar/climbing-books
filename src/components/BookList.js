@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import data from '../config.json'
 import SeeDetailButton from './SeeDetailButton';
 
 function BookList() {
-    const url = "https://www.googleapis.com/books/v1/volumes?q=climbing&key="+data.API_KEY;
+    const url = "https://www.googleapis.com/books/v1/volumes?q=climbing&key="+process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
 
     const [books, setBooks] = useState([]);
 

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../config.json';
 
 function BookDetail() {
     let { bookid } = useParams();
     const [book, setBook] = useState();
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${bookid}&key=${data.API_KEY}`
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${bookid}&key=${process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}`
 
     const fetchBookDetail = async () => {
       try {

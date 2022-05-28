@@ -2,6 +2,8 @@
 
 # config
 config.json
+config.js
+.env
 
 # dependencies
 /node_modules

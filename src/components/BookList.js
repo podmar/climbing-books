@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import SeeDetailButton from './SeeDetailButton';
 
 function BookList() {
-    const url = "https://www.googleapis.com/books/v1/volumes?q=climbing&key="+process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
+    let startIndex = 0;
+    const url = "https://www.googleapis.com/books/v1/volumes?q=climbing&key="+process.env.REACT_APP_GOOGLE_BOOKS_API_KEY+"&startIndex="+startIndex;
 
     const [books, setBooks] = useState([]);
 

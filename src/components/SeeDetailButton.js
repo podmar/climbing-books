@@ -1,4 +1,5 @@
 import React from 'react'
+// import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 function SeeDetailButton(props) {
@@ -13,6 +14,14 @@ function SeeDetailButton(props) {
         >
             {`Read more`}
         </button>
+
+    {/* <Button
+      onClick={() => {
+      navigate(`detail/${props.id}`)
+      }}
+    >
+    {`Read more`}
+    </Button> */}
     </>
   )
 }

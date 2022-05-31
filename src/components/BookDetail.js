@@ -25,8 +25,8 @@ function BookDetail() {
       <>
         {book &&  <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p> }
         <div>
-{/* placeholder for a separate component with a book view. IS IT NEEDED? WILL IT BE REUSED? */}
-    </div>
+          <p>{book.volumeInfo.description}</p>
+        </div>
       </>
   )
 }

@@ -25,8 +25,6 @@ function BookList() {
     };
 
     const handlePageClick = (event) => {
-        // console.log(event);
-        // console.log(event.selected);
         setCurrentIndex(event.selected)
         console.log(currentIndex);
     };
@@ -55,12 +53,25 @@ function BookList() {
     {totalPageCount && 
         <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={2}
         pageCount={totalPageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
+        containerClassName="pagination justify-content-center"
+        pageClassName="page-item"
+        pageLinkClassName="page-link"
+        activeClassName="page-item active"
+        activeLinkClassName="page-link active"
+        previousClassName="page-item"
+        previousLinkClassName="page-link"
+        nextClassName="page-item"
+        nextLinkClassName="page-link"
+        disabledClassName="page-item disabled"
+        disabledLinkClassName="page-link"
+        breakClassName="page-item"
+        breakLinkClassName="page-link"
         />}
     </>
   )

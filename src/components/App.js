@@ -10,8 +10,10 @@ import ErrorPage from '../views/ErrorPage.js';
 import Nav from './Nav.js';
 import { AuthContextProvider } from '../context/AuthContext';
 import ProtectedRoute from './ProtectedRoute';
+import { app } from "../config"
 
 function App() {
+  console.log(app);
   return (
     <>
       <AuthContextProvider>

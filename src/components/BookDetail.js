@@ -12,6 +12,7 @@ function BookDetail() {
         const bookData = await response.json();
         const bookDetail =  bookData.items[0];
         setBook(bookDetail);
+        console.log(book);
       } catch (err) {
         console.log(err);
       }
@@ -23,10 +24,12 @@ function BookDetail() {
 
   return (
       <>
-        {book &&  <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p> }
+        {book &&
         <div>
+          <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p>
           <p>{book.volumeInfo.description}</p>
         </div>
+        }
       </>
   )
 }

@@ -8,6 +8,7 @@ function SeeDetailButton(props) {
   return (
     <>
         <Button 
+        size="sm"
         variant="outline-primary"
         onClick={() => {
             navigate(`detail/${props.id}`)

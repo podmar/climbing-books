@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import SeeDetailButton from './SeeDetailButton';
 import Pagination from './Pagination';
 import { Col, Container, Row } from 'react-bootstrap';
+import BookPreview from './BookPreview';
 
 function BookList() {
     const [books, setBooks] = useState([]);
@@ -45,22 +45,7 @@ function BookList() {
                     <Container
                     key={book.id}
                     >
-                        <Row
-                        className='justify-content-center'
-                        >
-                            <Col>
-                                <h5>{book.volumeInfo.title} </h5>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col xs={4}>
-                                <img src={book.volumeInfo.imageLinks.thumbnail} alt={`Cover photo of the book ${book.volumeInfo.title}`}/>
-                            </Col>
-                            <Col>
-                                <p>{`${book.volumeInfo.description.slice(0, 150)}...`}</p>
-                                <SeeDetailButton id={book.id} />
-                            </Col>
-                        </Row>
+                        <BookPreview props={book}/>
                     </Container>
                 )
             }

@@ -40,23 +40,20 @@ function BookList() {
                 {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> : "Loading..." }
             </Col>
         </Row>
-            {books && books.map(book => { 
-                return (
-                    <Container
-                    key={book.id}
-                    >
-                        <BookPreview props={book}/>
-                    </Container>
-                )
-            }
-            )}
-        <Row>
-            <Col>
-                {totalPageCount && 
-                    <Pagination handlePageClick={handlePageClick} totalPageCount={totalPageCount}
-                    />}
-            </Col>
-        </Row>
+        {books && books.map(book => { 
+            return (
+                <Container
+                key={book.id}
+                >
+                    <BookPreview props={book}/>
+                </Container>
+            )
+        }
+        )}
+
+        {totalPageCount && 
+            <Pagination handlePageClick={handlePageClick} totalPageCount={totalPageCount}
+            />}
     </>
   )
 }

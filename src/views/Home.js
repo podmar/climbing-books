@@ -5,7 +5,7 @@ import BookList from '../components/BookList';
 function Home() {
   return (
     <>
-      <Row className='justify-content-center'>
+      <Row className='justify-content-center py-5'>
         <Col>
             <h1>vertical library</h1>
             <h5>grow beyond the horizon</h5> 

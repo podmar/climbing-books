@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import GoToButton from '../components/GoToButton'
 import { AuthContext } from '../context/AuthContext';
 
@@ -25,19 +25,31 @@ function Register() {
 
   return (
     <>
-      <div>Register</div>
-      <div>
-        <label htmlFor="email">email</label>
-        <input type="email" name="email" id="email" onChange={handleEmailChange} 
-        // value={email}
-        />
-        <label htmlFor="password"></label>
-        <input type="password" name="password" id="password" onChange={handlePasswordChange} 
-        // value={password}
-        />
-        <Button type="primary" onClick={handleRegister}>Register</Button>
-      </div>
-      <GoToButton path="/" element="home page" />
+      <Row className='justify-content-center'>
+        <Col>
+          <h1>register</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+            <label htmlFor="email">email</label>
+            <input type="email" name="email" id="email" onChange={handleEmailChange} 
+            // value={email}
+            />
+        </Col>
+        <Col>
+            <label htmlFor="password">password</label>
+            <input type="password" name="password" id="password" onChange={handlePasswordChange} 
+            // value={password}
+            />
+        </Col>
+        <Col className='align-items-flex-end'>
+            <Button type="primary" onClick={handleRegister}>Register</Button>
+        </Col>
+      </Row>
+      <Row>
+        <GoToButton path="/" element="home page" />
+      </Row>
     </>
   )
 }

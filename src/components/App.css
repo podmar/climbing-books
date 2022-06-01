@@ -4,6 +4,16 @@ font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Roboto Slab', serif; */
 
 .App {
-  text-align: center;
+  text-align: left;
   font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: right;
+  font-family: 'Roboto Slab', serif;
+}
+
+h5 {
+  text-align: right;
+  font-family: 'Roboto Condensed', sans-serif;
 }

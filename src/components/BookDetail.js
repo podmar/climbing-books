@@ -25,10 +25,11 @@ function BookDetail() {
   return (
       <>
         {book &&
-        <div>
-          <p>{`This is the detailed view of the book ${ book.volumeInfo.title }.`}</p>
-          <p>{book.volumeInfo.description}</p>
-        </div>
+            <>
+              <h1>{ book.volumeInfo.title }</h1>
+              <h5>{ book.volumeInfo.subtitle }</h5>
+              <p>{book.volumeInfo.description}</p>
+            </>
         }
       </>
   )

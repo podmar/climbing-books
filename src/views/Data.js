@@ -1,11 +1,17 @@
 import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 import GoToButton from '../components/GoToButton'
 
 function Data() {
   return (
     <>
-    <div>Data</div>
-    <GoToButton path="/" element="Home"  />
+      <Row className='justify-content-center'>
+        <Col>
+          <h1>data</h1>
+          <h5>there is no content here just yet</h5>
+          <GoToButton path="/" element="Home"  />
+        </Col>
+      </Row>
     </>
   )
 }

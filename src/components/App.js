@@ -11,11 +11,12 @@ import Nav from './Nav.js';
 import { AuthContextProvider } from '../context/AuthContext';
 import ProtectedRoute from './ProtectedRoute';
 import { app } from "../config"
+import { Container } from 'react-bootstrap';
 
 function App() {
   console.log(app);
   return (
-    <>
+    <Container className='App'>
       <AuthContextProvider>
         <Nav />
         <Routes>
@@ -29,7 +30,7 @@ function App() {
       </AuthContextProvider>
 
       <footer>Copyright info</footer>
-    </>
+    </Container>
   )
 }
 

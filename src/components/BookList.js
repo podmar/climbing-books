@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SeeDetailButton from './SeeDetailButton';
 import Pagination from './Pagination';
+import { Col, Container, Row } from 'react-bootstrap';
 
 function BookList() {
     const [books, setBooks] = useState([]);
@@ -34,25 +35,45 @@ function BookList() {
 
   return (
     <>
-    <h5>Here are the books:</h5>
-    {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> : "Loading..." }
-    <div>
-        {books && books.map(book => { 
-            return (
-                <div
-                key={book.id}
-                >
-                    {book.volumeInfo.title} 
-                    <SeeDetailButton id={book.id} />
-                </div>
-            )
-        }
-        )}
-    </div>
-
-    {totalPageCount && 
-        <Pagination handlePageClick={handlePageClick} totalPageCount={totalPageCount}
-        />}
+        <Row>
+            <Col>
+                {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> : "Loading..." }
+            </Col>
+        </Row>
+            {books && books.map(book => { 
+                return (
+                    <Container
+                    key={book.id}
+                    >
+                        <Row
+                        className='justify-content-center'
+                        >
+                            <Col>
+                                <h5>{book.volumeInfo.title} </h5>
+                            </Col>
+                            <Col>
+                                <SeeDetailButton id={book.id} />
+                            </Col>
+                        </Row>
+                        <Row>
+                            {/* <Col>
+                                <img src={book.volumeInfo.imagelinks.smallThumbnail} alt={`Cover photo of the book ${book.volumeInfo.title}`}/>
+                            </Col> */}
+                            <Col>
+                                {`${book.volumeInfo.description.slice(0, 100)}...`}
+                            </Col>
+                        </Row>
+                    </Container>
+                )
+            }
+            )}
+        <Row>
+            <Col>
+                {totalPageCount && 
+                    <Pagination handlePageClick={handlePageClick} totalPageCount={totalPageCount}
+                    />}
+            </Col>
+        </Row>
     </>
   )
 }

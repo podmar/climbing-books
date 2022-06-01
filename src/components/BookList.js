@@ -51,16 +51,14 @@ function BookList() {
                             <Col>
                                 <h5>{book.volumeInfo.title} </h5>
                             </Col>
-                            <Col>
-                                <SeeDetailButton id={book.id} />
-                            </Col>
                         </Row>
                         <Row>
-                            {/* <Col>
-                                <img src={book.volumeInfo.imagelinks.smallThumbnail} alt={`Cover photo of the book ${book.volumeInfo.title}`}/>
-                            </Col> */}
+                            <Col xs={4}>
+                                <img src={book.volumeInfo.imageLinks.thumbnail} alt={`Cover photo of the book ${book.volumeInfo.title}`}/>
+                            </Col>
                             <Col>
-                                {`${book.volumeInfo.description.slice(0, 100)}...`}
+                                <p>{`${book.volumeInfo.description.slice(0, 150)}...`}</p>
+                                <SeeDetailButton id={book.id} />
                             </Col>
                         </Row>
                     </Container>

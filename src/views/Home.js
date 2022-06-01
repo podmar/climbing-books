@@ -8,7 +8,7 @@ function Home() {
       <Row className='justify-content-center'>
         <Col>
             <h1>vertical library</h1>
-            <h5>grow beond the horizon</h5> 
+            <h5>grow beyond the horizon</h5> 
         </Col>
       </Row>
       <BookList />

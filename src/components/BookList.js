@@ -40,17 +40,19 @@ function BookList() {
                 {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> : "Loading..." }
             </Col>
         </Row>
-        {books && books.map(book => { 
-            return (
-                <Container
-                className='py-3'
-                key={book.id}
-                >
-                    <BookPreview props={book}/>
-                </Container>
-            )
-        }
-        )}
+        <Container className='d-flex flex-wrap'>
+            {books && books.map(book => { 
+                return (
+                    <Container
+                    className='py-3'
+                    key={book.id}
+                    >
+                        <BookPreview props={book}/>
+                    </Container>
+                )
+            }
+            )}
+        </Container>
 
         {totalPageCount && 
             <Pagination handlePageClick={handlePageClick} totalPageCount={totalPageCount}

@@ -12,6 +12,7 @@ import { AuthContextProvider } from '../context/AuthContext';
 import ProtectedRoute from './ProtectedRoute';
 import { app } from "../config"
 import { Container } from 'react-bootstrap';
+import Login from '../views/Login';
 
 function App() {
   console.log(app);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="detail/:bookid" element={<ProtectedRoute><Detail /></ProtectedRoute>} />
           <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
           <Route path="chatroom" element={<ProtectedRoute><ChatRoom /></ProtectedRoute>} />
           <Route path="data" element={<Data />} />
           <Route path="*" element={<ErrorPage />} />

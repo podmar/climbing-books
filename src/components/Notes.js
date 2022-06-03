@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../config'
 
 function Notes() {
-    const [notes, setNotes] = useState(null)
-    const [noteId, setNoteId] = useState(null)
+    const [notes, setNotes] = useState()
+    const [noteId, setNoteId] = useState()
 
     const getNotes = async() => {
         try {
@@ -23,6 +23,10 @@ function Notes() {
         }
     };
 
+    const noteDate = (time) => {
+        return new Date(time*1000).toLocaleDateString();
+    };
+
     useEffect(() => {
         getNotes();
     }, []);
@@ -35,7 +39,8 @@ function Notes() {
         <div key={index}>
             <p>{note.text}</p>
             <p>{note.book_id}</p>
-            <p>{note.user}</p>
+            <p>{note.user} on {noteDate(note.date.seconds)}</p>
+            <p></p>
         </div>
         )
     }) 

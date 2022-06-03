@@ -32,7 +32,7 @@ function Notes() {
 
   return (
     <>
-    <p>Notes on your books</p>
+    <p>Notes on your books: </p>
     {notes && notes.map((note, index) => {
         return (
             <Container className='py-2' key={index}>

@@ -8,12 +8,12 @@ function Nav() {
 
     const login = () => {
         setUser({ userName: "Marta" })
-        console.log(user)
+        console.log("logged in user:", user)
     }
 
     const logout = () => {
         setUser(null)
-        console.log(user)
+        console.log("logged out the following user:", user)
     }
 
   return (

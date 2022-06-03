@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Button } from 'react-bootstrap';
+import { Button, Container, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
@@ -18,17 +18,19 @@ function Nav() {
 
   return (
     <>
-        <nav>
-          <Link to="/"> Home </Link>
-          <Link to="detail"> Detail </Link>
-          <Link to="register"> Register </Link>
-          <Link to="chatroom"> Chatroom </Link>
-          <Link to="data"> Data </Link>
-          { user ? 
-          <Button onClick={logout}>Logout</Button> :
-          <Button onClick={login}>Login</Button>
-          }
-        </nav>
+        <Navbar fixed="top" className='Nav'>
+          <Container>         
+            <Link className='text-decoration-none Nav' to="/"> Home </Link>
+            <Link className='text-decoration-none Nav' to="detail"> Detail </Link>
+            <Link className='text-decoration-none Nav' to="register"> Register </Link>
+            <Link className='text-decoration-none Nav' to="chatroom"> Chatroom </Link>
+            <Link className='text-decoration-none Nav' to="data"> Data </Link>
+            { user ? 
+              <Button onClick={logout}>Logout</Button> :
+              <Button onClick={login}>Login</Button>
+            }
+          </Container>
+        </Navbar>
     </>
   )
 }

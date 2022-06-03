@@ -26,7 +26,7 @@ function Login() {
 
   return (
     <>
-    <Row className='justify-content-center py-5'>
+      <Row className='justify-content-center py-5'>
         <Col>
           <h1>login</h1>
         </Col>

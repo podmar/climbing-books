@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 function ChatRoom() {
   return (
     <>
-    <Row className='justify-content-center py-5'>
+    <Row className='justify-content-center py-5 mt-4'>
       <Col>
         <h1>chatroom</h1>
         <h5>there is no content here just yet</h5>

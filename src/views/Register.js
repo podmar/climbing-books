@@ -25,7 +25,7 @@ function Register() {
 
   return (
     <>
-      <Row className='justify-content-center py-5'>
+      <Row className='justify-content-center py-5 mt-4'>
         <Col>
           <h1>register</h1>
         </Col>

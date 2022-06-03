@@ -5,7 +5,7 @@ import GoToButton from '../components/GoToButton';
 function Detail() {
   return (
     <>
-      <Row className='justify-content-center'>
+      <Row className='justify-content-center py-5'>
         <Col>
           <BookDetail />
           <GoToButton path="/" element="Home" />

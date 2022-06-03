@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import Notes from '../components/Notes'
 
 function ChatRoom() {
   return (
@@ -8,6 +9,11 @@ function ChatRoom() {
       <Col>
         <h1>chatroom</h1>
         <h5>there is no content here just yet</h5>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Notes />
       </Col>
     </Row>
   </>

@@ -2,13 +2,13 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Notes from '../components/Notes'
 
-function ChatRoom() {
+function MyRack() {
   return (
     <>
     <Row className='justify-content-center py-5 mt-4'>
       <Col>
-        <h1>chatroom</h1>
-        <h5>there is no content here just yet</h5>
+        <h1>my rack</h1>
+        <h5>here are the books placed on your rack</h5>
       </Col>
     </Row>
     <Row>
@@ -20,4 +20,4 @@ function ChatRoom() {
   )
 }
 
-export default ChatRoom
+export default MyRack

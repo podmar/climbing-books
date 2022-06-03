@@ -23,7 +23,7 @@ function Nav() {
             <Link className='text-decoration-none Nav' to="/"> Home </Link>
             <Link className='text-decoration-none Nav' to="detail"> Detail </Link>
             <Link className='text-decoration-none Nav' to="register"> Register </Link>
-            <Link className='text-decoration-none Nav' to="chatroom"> Chatroom </Link>
+            <Link className='text-decoration-none Nav' to="myrack"> My Rack </Link>
             <Link className='text-decoration-none Nav' to="data"> Data </Link>
             { user ? 
               <Button onClick={logout}>Logout</Button> :

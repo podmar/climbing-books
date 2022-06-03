@@ -9,6 +9,11 @@ function ErrorPage() {
         <Col>
           <h1>snap!</h1>
           <h5>The page you're trying to access does not exist. </h5>
+        </Col>
+      </Row>
+      <Row className='justify-content-center'>
+        <Col>
+        
           <p>How about you take a look at some books on the main page instead?</p>
           <GoToButton path="/" element="main page" />
 

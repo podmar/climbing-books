@@ -15,7 +15,6 @@ import { Container } from 'react-bootstrap';
 import Login from '../views/Login';
 
 function App() {
-  console.log(app);
   return (
     <Container className='App'>
       <AuthContextProvider>

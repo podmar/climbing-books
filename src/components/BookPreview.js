@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Image, Row } from 'react-bootstrap'
+import { Col, Image, Row } from 'react-bootstrap'
 import SeeDetailButton from './SeeDetailButton'
 
 function BookPreview({props}) {

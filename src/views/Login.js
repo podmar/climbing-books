@@ -54,8 +54,10 @@ function Login() {
       </Row>
       <Row className='py-3'>
         <Col>
-          <p>Not a user yet? Register here:</p>
-          <GoToButton path="register" element="registration page" />
+          <h5>not a user yet? register here:</h5>
+          <div className='d-flex justify-content-end'>
+            <GoToButton path="register" element="registration page" />
+          </div>
         </Col>
       </Row>
     </>

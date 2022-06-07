@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../config.js"
 import { useNavigate } from "react-router-dom";
 
@@ -55,9 +55,13 @@ export const AuthContextProvider = (props) => {
     };
 
     const logout = () => {
-        setUser(null)
-        console.log("logged out the following user:", user)
-    }
+        signOut(auth)
+        .then(() => {
+            setUser(null)
+        }).catch((error) => {
+            console.log(error);
+        })
+    };
 
     useEffect(() => {
       checkIfUserLoggedin();

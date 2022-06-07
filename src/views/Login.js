@@ -54,7 +54,7 @@ function Login() {
         <Col>
           <h5>not a user yet? register here:</h5>
           <div className='d-flex justify-content-end'>
-            <GoToButton path="register" element="registration page" />
+            <GoToButton path="/register" element="registration page" />
           </div>
         </Col>
       </Row>

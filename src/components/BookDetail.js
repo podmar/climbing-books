@@ -35,7 +35,11 @@ function BookDetail() {
                 <Image fluid="true" src={book.volumeInfo.imageLinks.thumbnail} alt={`Cover photo of ${book.volumeInfo.title}`}/>
               </div>
               <p>{book.volumeInfo.description}</p>
-            </> : "Loading book preview..."
+            </> : 
+            <div className='py-3'>
+              <p>Loading detailed book view...</p>
+            </div>
+            
         }
       </div>
   )

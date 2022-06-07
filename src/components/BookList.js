@@ -37,7 +37,11 @@ function BookList() {
     <>
         <Row>
             <Col>
-                {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> : "Loading..." }
+                {totalBookCount ? <p>A total of {totalBookCount} results, page {currentIndex+1}</p> :
+                    <div className='py-3'>
+                        <p>Loading list view...</p>
+                    </div> 
+                }
             </Col>
         </Row>
         <Container className='d-flex flex-wrap'>

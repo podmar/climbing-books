@@ -33,15 +33,17 @@ function Notes() {
   return (
     <>
     <p>Notes on your books: </p>
-    {notes && notes.map((note, index) => {
+    {notes ? (notes.map((note, index) => {
         return (
             <Container className='py-2' key={index}>
                 <BookFetchPreview bookId={note.book_id} />
                 <NoteCard note={note} date={noteDate(note.date.seconds)} />
             </Container>
-        )
-    }) 
-    }
+        )})) :
+        <div className='py-3'>
+            <p>Loading your notes...</p>
+        </div> 
+    } 
     </>
   )
 }

@@ -1,42 +1,43 @@
 import { createContext, useState } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config.js"
+import { useNavigate } from "react-router-dom";
 
 
 export const AuthContext = createContext();
 
 export const AuthContextProvider = (props) => {
     const [user, setUser] = useState(null)
-    
-    const register = (email, password) => {
+    const redirectTo = useNavigate();
+
+    const register = async (email, password) => {
         console.log("email + password", email, password)
 
-        //transform into asynch await
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            setUser(user);
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+            setUser(userCredential.user.email);
             console.log(userCredential)
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-        });
-    };
+            redirectTo("myrack")
+        } catch (error) {
+            console.log(error)
+            setUser(null)
+            }
+        }
 
     const login = (email, password) => {
+
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
-                const user = userCredential.user;
-                console.log(user)
+                console.log(userCredential.user)
+                setUser(userCredential.user.email)
+                redirectTo("myrack")
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                setUser(null)
+                console.log(errorCode, errorMessage);
             });
     };
 

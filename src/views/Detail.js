@@ -18,7 +18,8 @@ function Detail() {
     console.log(note);
   }; 
 
-  const handleNoteSave = async () => {
+  const handleNoteSave = async (event) => {
+    event.preventDefault()
     const noteObj = {
       text: note,
       user: user.email,

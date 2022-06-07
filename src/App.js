@@ -1,18 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route} from 'react-router-dom';
-import Home from '../views/Home.js';
-import Detail from '../views/Detail.js';
-import Register from '../views/Register.js';
-import Data from '../views/Data.js';
-import ErrorPage from '../views/ErrorPage.js';
-import Nav from './Nav.js';
-import { AuthContextProvider } from '../context/AuthContext';
-import ProtectedRoute from './ProtectedRoute';
-import { app } from "../config"
+import Home from './views/Home.js';
+import Detail from './views/Detail.js';
+import Register from './views/Register.js';
+import Data from './views/Data.js';
+import ErrorPage from './views/ErrorPage.js';
+import Nav from './components/Nav.js';
+import { AuthContextProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import { app } from "./config"
 import { Container } from 'react-bootstrap';
-import Login from '../views/Login';
-import MyRack from '../views/MyRack';
+import Login from './views/Login';
+import MyRack from './views/MyRack';
 
 function App() {
   return (

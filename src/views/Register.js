@@ -54,11 +54,12 @@ function Register() {
       </Row>
       <Row className='py-3'>
         <Col>
-          <p>Already a user? Login here:</p>
+          <h5>already a user? login here:</h5>
+          <div className='d-flex justify-content-end'>
           <GoToButton path="/login" element="login page" />
+          </div>
         </Col>
       </Row>
-
     </>
   )
 }

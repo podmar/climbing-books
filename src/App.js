@@ -30,7 +30,7 @@ function App() {
         </Routes>
       </AuthContextProvider>
 
-      <footer>© {(new Date).getFullYear}2022 Marta Podziewska</footer>
+      <footer className='pt-3'>© {(new Date).getFullYear}2022 Marta Podziewska</footer>
     </Container>
   )
 }

@@ -6,7 +6,7 @@ function GoToButton(props) {
     let navigate = useNavigate();
   return (
     <>
-      <Button
+      <Button variant="primary"
         onClick={() => {
             navigate(props.path)
         }}

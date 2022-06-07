@@ -10,18 +10,16 @@ function Login() {
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    console.log(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-    console.log(event.target.value);
   };
 
   const handleLogin = (event) => {
     event.preventDefault();
     login(email, password)
-    console.log("loggedin");
+    // event.target.value = "";
   };
 
   return (

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Image } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 function BookDetail() {
@@ -23,15 +24,20 @@ function BookDetail() {
     },[])
 
   return (
-      <>
-        {book &&
+      <div>
+        {book ?
             <>
-              <h1>{ book.volumeInfo.title }</h1>
-              <h5>{ book.volumeInfo.subtitle }</h5>
+              <div className='pb-5'>
+                <h1>{ book.volumeInfo.title }</h1>
+                <h5>{ book.volumeInfo.subtitle }</h5>
+              </div>
+              <div className='pb-3 d-flex justify-content-end'>
+                <Image fluid="true" src={book.volumeInfo.imageLinks.thumbnail} alt={`Cover photo of ${book.volumeInfo.title}`}/>
+              </div>
               <p>{book.volumeInfo.description}</p>
-            </>
+            </> : "Loading book preview..."
         }
-      </>
+      </div>
   )
 }
 

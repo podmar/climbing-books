@@ -46,8 +46,6 @@ export const AuthContextProvider = (props) => {
     const checkIfUserLoggedin = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/firebase.User
                 const uid = user.uid;
                 setUser(user);
             } else {
@@ -56,6 +54,11 @@ export const AuthContextProvider = (props) => {
         });
     };
 
+    const logout = () => {
+        setUser(null)
+        console.log("logged out the following user:", user)
+    }
+
     useEffect(() => {
       checkIfUserLoggedin();
     }, [])
@@ -63,7 +66,7 @@ export const AuthContextProvider = (props) => {
 
     return (
         <AuthContext.Provider
-        value={ {user, setUser, register, login} }
+        value={ {user, setUser, register, login, logout} }
         >
             {props.children}
         </AuthContext.Provider>

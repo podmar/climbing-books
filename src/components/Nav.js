@@ -1,19 +1,16 @@
 import React, { useContext } from 'react'
 import { Button, Container, Navbar, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 function Nav() {
-    const { user, setUser } = useContext(AuthContext);
+    const { user, setUser, logout } = useContext(AuthContext);
+    const navigateTo = useNavigate();
 
     const login = () => {
         setUser({ userName: "Marta" })
         console.log("logged in user:", user)
-    }
-
-    const logout = () => {
-        setUser(null)
-        console.log("logged out the following user:", user)
+        navigateTo("login");
     }
 
   return (

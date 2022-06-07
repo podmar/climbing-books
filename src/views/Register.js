@@ -19,6 +19,7 @@ function Register() {
   };
 
   const handleRegister = (event) => {
+    event.preventDefault();
     console.log("registered");
     register(email, password)
   };
@@ -28,49 +29,35 @@ function Register() {
       <Row className='justify-content-center py-5 mt-4'>
         <Col>
           <h1>register</h1>
+          <h5>are you new to vertical library? register below</h5>
         </Col>
       </Row>
       <Row>
         <Col>
-            <label htmlFor="email">email</label>
-            <input type="email" name="email" id="email" onChange={handleEmailChange} 
+          <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label >email:</Form.Label>
+            <Form.Control type="email" name="email" onChange={handleEmailChange} 
             // value={email}
             />
-        </Col>
-        <Col>
-            <label htmlFor="password">password</label>
-            <input type="password" name="password" id="password" onChange={handlePasswordChange} 
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>password:</Form.Label>
+            <Form.Control type="password" name="password" onChange={handlePasswordChange} 
             // value={password}
             />
-        </Col>
-        <Col className='align-items-flex-end'>
+          </Form.Group>
             <Button type="primary" onClick={handleRegister}>Register</Button>
+            </Form>
         </Col>
       </Row>
-      <Row>
-        <GoToButton path="/" element="home page" />
+      <Row className='py-3'>
+        <Col>
+          <p>Already a user? Login here:</p>
+          <GoToButton path="/login" element="login page" />
+        </Col>
       </Row>
-
-      {/* <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form> */}
 
     </>
   )

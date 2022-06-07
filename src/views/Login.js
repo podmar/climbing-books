@@ -19,6 +19,7 @@ function Login() {
   };
 
   const handleLogin = (event) => {
+    event.preventDefault();
     login(email, password)
     console.log("loggedin");
   };
@@ -28,21 +29,22 @@ function Login() {
       <Row className='justify-content-center py-5  mt-4'>
         <Col>
           <h1>login</h1>
+          <h5>already have an account? login below</h5>
         </Col>
       </Row>
       <Row>
         <Col>
           <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label htmlFor="email">email</Form.Label>
-            <Form.Control type="email" name="email" id="email" onChange={handleEmailChange} 
+            <Form.Label >email:</Form.Label>
+            <Form.Control type="email" name="email" onChange={handleEmailChange} 
             // value={email}
             />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label htmlFor="password">password</Form.Label>
-            <Form.Control type="password" name="password" id="password" onChange={handlePasswordChange} 
+            <Form.Label>password:</Form.Label>
+            <Form.Control type="password" name="password" onChange={handlePasswordChange} 
             // value={password}
             />
           </Form.Group>
@@ -52,7 +54,8 @@ function Login() {
       </Row>
       <Row className='py-3'>
         <Col>
-          <GoToButton path="/" element="home page" />
+          <p>Not a user yet? Register here:</p>
+          <GoToButton path="register" element="registration page" />
         </Col>
       </Row>
     </>

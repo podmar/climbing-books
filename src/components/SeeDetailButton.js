@@ -11,7 +11,7 @@ function SeeDetailButton(props) {
         size="sm"
         variant="outline-primary"
         onClick={() => {
-            navigate(`detail/${props.id}`)
+            navigate(`/detail/${props.id}`)
         }}
         >
             {`Read more`}

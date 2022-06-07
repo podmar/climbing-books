@@ -10,7 +10,7 @@ import { db } from '../config';
 function Detail() {
   const [note, setNote] = useState("");
   const {user} = useContext(AuthContext);
-  let { bookid } = useParams();
+  const { bookid } = useParams();
 
 
   const handleNoteChange = (event) => {
@@ -21,7 +21,7 @@ function Detail() {
   const handleNoteSave = async () => {
     const noteObj = {
       text: note,
-      user: user,
+      user: user.email,
       date: new Date(),
       book_id: bookid,
     }

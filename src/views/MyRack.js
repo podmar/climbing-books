@@ -12,7 +12,7 @@ function MyRack() {
       <Col>
         <h1>my rack</h1>
         {user && 
-        <h5>hi {user.slice(0, user.indexOf("@"))}!</h5>
+        <h5>hi {user.email.slice(0, user.email.indexOf("@"))}!</h5>
         }
         <h5>here are the books placed on your rack</h5>
       </Col>

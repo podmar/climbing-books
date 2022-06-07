@@ -18,7 +18,7 @@ function Nav() {
         <Navbar fixed="top" className='Nav'>
           <Container>         
             <Link className='text-decoration-none Nav' to="/"> Home </Link>
-            <Link className='text-decoration-none Nav' to="register"> Register </Link>
+            {/* <Link className='text-decoration-none Nav' to="register"> Register </Link> */}
             <Link className='text-decoration-none Nav' to="myrack"> My Rack </Link>
             <Link className='text-decoration-none Nav' to="data"> Data </Link>
             { user ? 

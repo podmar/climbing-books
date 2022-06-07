@@ -30,7 +30,7 @@ function App() {
         </Routes>
       </AuthContextProvider>
 
-      <footer>Copyright info</footer>
+      <footer>© {(new Date).getFullYear}2022 Marta Podziewska</footer>
     </Container>
   )
 }

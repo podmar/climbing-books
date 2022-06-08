@@ -48,7 +48,7 @@ function BookList() {
             {books && books.map(book => { 
                 return (
                     <Container
-                    className='py-3'
+                    className='py-1'
                     key={book.id}
                     >
                         <BookPreview props={book}/>

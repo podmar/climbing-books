@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
+import { ArrowRight } from 'react-bootstrap-icons';
 import { useNavigate } from 'react-router-dom';
 
 function SeeDetailButton(props) {
@@ -8,13 +9,15 @@ function SeeDetailButton(props) {
   return (
     <>
         <Button 
-        size="sm"
-        variant="outline-primary"
+        size="jg"
+        className='text-primary'
+        variant="outline-none"
         onClick={() => {
             navigate(`/detail/${props.id}`)
         }}
         >
-            {`Read more`}
+            {/* {`More `} */}
+            <ArrowRight/>
         </Button>
     </>
   )

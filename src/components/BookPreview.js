@@ -10,6 +10,10 @@ function BookPreview({props}) {
         <Row
         className='justify-content-center'
         >
+            {/* <Col xs={2} md={1} className='d-flex'>
+                <SeeDetailButton id={props.id} />
+                <FavButton/>
+            </Col> */}
             <Col>
                 <h5>{props.volumeInfo.title} </h5>
             </Col>

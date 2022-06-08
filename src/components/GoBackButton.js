@@ -6,8 +6,7 @@ function GoBackButton() {
     const navigate = useNavigate()
   return (
     <>
-        <Button 
-        size="lg"
+        <Button
         className='d-flex'
         variant="outline-primary"
         onClick={() => {

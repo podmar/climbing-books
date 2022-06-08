@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import Notes from '../components/Notes'
+import UserNotes from '../components/UserNotes'
 import { AuthContext } from '../context/AuthContext'
 
 function MyRack() {
@@ -19,7 +19,7 @@ function MyRack() {
     </Row>
     <Row>
       <Col>
-        <Notes />
+        <UserNotes/>
       </Col>
     </Row>
   </>

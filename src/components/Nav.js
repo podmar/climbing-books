@@ -26,25 +26,13 @@ function Nav() {
                 size='lg'
                 className='d-flex'
                 onClick={logout}>
-              {/* Logout */}
-                {/* <span class="material-symbols-outlined">
-                  person_filled
-                </span> */}
-                <PersonFill 
-                // size="s"
-                />
+                <PersonFill/>
               </Button> :
               <Button 
                 size='lg'
                 className='d-flex'
                 onClick={login}>
-              {/* Login */}
-              {/* <span class="material-symbols-outlined">
-                  person_off
-              </span> */}
-              <Person 
-              // size="s"
-              />
+              <Person/>
               </Button>
             }
           </Container>

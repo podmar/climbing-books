@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Button, Container, Navbar, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import GoBackButton from './GoBackButton';
 
 function Nav() {
     const { user, setUser, logout } = useContext(AuthContext);
@@ -16,7 +17,8 @@ function Nav() {
   return (
     <>
         <Navbar fixed="top" className='Nav'>
-          <Container>         
+          <Container>
+            <GoBackButton/>
             <Link className='text-decoration-none Nav' to="/"> Home </Link>
             {/* <Link className='text-decoration-none Nav' to="register"> Register </Link> */}
             <Link className='text-decoration-none Nav' to="myrack"> My Rack </Link>

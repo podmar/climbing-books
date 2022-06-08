@@ -9,20 +9,17 @@ function Nav() {
     const navigateTo = useNavigate();
 
     const login = () => {
-        setUser({ userName: "Marta" })
-        console.log("logged in user:", user)
         navigateTo("login");
-    }
+    };
 
   return (
     <>
         <Navbar fixed="top" className='Nav'>
           <Container>
             <GoBackButton/>
-            <Link className='text-decoration-none Nav' to="/"> Home </Link>
-            {/* <Link className='text-decoration-none Nav' to="register"> Register </Link> */}
-            <Link className='text-decoration-none Nav' to="myrack"> My Rack </Link>
-            <Link className='text-decoration-none Nav' to="data"> Data </Link>
+            <Link className='text-decoration-none Nav' to="/"> home </Link>
+            <Link className='text-decoration-none Nav' to="myrack"> my rack </Link>
+            {/* <Link className='text-decoration-none Nav' to="data"> Data </Link> */}
             { user ? 
               <Button onClick={logout}>Logout</Button> :
               <Button onClick={login}>Login</Button>

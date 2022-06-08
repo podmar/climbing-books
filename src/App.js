@@ -15,6 +15,8 @@ import Login from './views/Login';
 import MyRack from './views/MyRack';
 
 function App() {
+  const year = new Date().getFullYear().toString();
+
   return (
     <Container className='App'>
       <AuthContextProvider>
@@ -30,7 +32,7 @@ function App() {
         </Routes>
       </AuthContextProvider>
 
-      <footer className='pt-3'>© {(new Date).getFullYear}2022 Marta Podziewska</footer>
+      <footer className='pt-3'>© {year} Marta Podziewska</footer>
     </Container>
   )
 }

@@ -13,7 +13,7 @@ function GoBackButton() {
             navigate(-1)
         }}
         >
-            <span class="material-symbols-outlined">keyboard_double_arrow_left</span>
+            <span className="material-symbols-outlined">keyboard_double_arrow_left</span>
         </Button>
     </>
   )

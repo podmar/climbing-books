@@ -7,8 +7,8 @@ function GoBackButton() {
   return (
     <>
         <Button
-        className='d-flex'
-        variant="outline-primary"
+        className='d-flex text-primary'
+        variant="outline-none"
         onClick={() => {
             navigate(-1)
         }}

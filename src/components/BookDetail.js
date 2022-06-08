@@ -13,7 +13,6 @@ function BookDetail() {
         const bookData = await response.json();
         const bookDetail =  bookData.items[0];
         setBook(bookDetail);
-        console.log(book);
       } catch (err) {
         console.log(err);
       }

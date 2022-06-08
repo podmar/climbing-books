@@ -12,7 +12,6 @@ function BookFetchPreview(props) {
         const bookData = await response.json();
         const bookDetail =  bookData.items[0];
         setBook(bookDetail);
-        console.log(bookDetail);
       } catch (err) {
         console.log(err);
       }

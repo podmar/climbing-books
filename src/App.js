@@ -4,7 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 import Home from './views/Home.js';
 import Detail from './views/Detail.js';
 import Register from './views/Register.js';
-import Data from './views/Data.js';
+import About from './views/About.js';
 import ErrorPage from './views/ErrorPage.js';
 import Nav from './components/Nav.js';
 import { AuthContextProvider } from './context/AuthContext';
@@ -25,7 +25,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="myrack" element={<ProtectedRoute><MyRack /></ProtectedRoute>} />
-          <Route path="data" element={<Data />} />
+          <Route path="about" element={<About />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </AuthContextProvider>

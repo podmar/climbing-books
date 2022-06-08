@@ -19,7 +19,7 @@ function Nav() {
             <GoBackButton/>
             <Link className='text-decoration-none Nav' to="/"> home </Link>
             <Link className='text-decoration-none Nav' to="myrack"> my rack </Link>
-            {/* <Link className='text-decoration-none Nav' to="data"> Data </Link> */}
+            <Link className='text-decoration-none Nav' to="about"> about </Link>
             { user ? 
               <Button onClick={logout}>Logout</Button> :
               <Button onClick={login}>Login</Button>

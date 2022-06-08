@@ -1,14 +1,16 @@
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { db } from '../config'
+import { AuthContext } from '../context/AuthContext';
 import NoteCard from './NoteCard';
 
 function BookReviews() {
     const [reviews, setReviews] = useState()
     let { bookid } = useParams();
-    const bookReviews = query(collection(db, "notes"), where("book_id", "==", bookid));
+    const {user} = useContext(AuthContext);
+    const bookReviews = query(collection(db, "notes"), where("book_id", "==", bookid), where("user", "!=", user.email));
 
     const getReviews = async() => {
         try {
@@ -42,7 +44,7 @@ function BookReviews() {
             </Container>
         )})) :
         <div className='py-3'>
-            <p>Loading your notes...</p>
+            <p>Loading reviews...</p>
         </div> 
     } 
     </>

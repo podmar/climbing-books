@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Image, Row } from 'react-bootstrap'
+import FavButton from './FavButton'
 import SeeDetailButton from './SeeDetailButton'
 
 function BookPreview({props}) {
@@ -20,6 +21,7 @@ function BookPreview({props}) {
             <Col>
                 <p>{`${props.volumeInfo.description.slice(0, 100)}...`}</p>
                 <SeeDetailButton id={props.id} />
+                <FavButton/>
             </Col>
         </Row>
       </>

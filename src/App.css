@@ -27,3 +27,16 @@ h5 {
 p {
   text-align: justify;
 }
+
+.material-symbols-outlined {
+  font-size: xx-large;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.go-back-button {
+  outline: none;
+}

@@ -2,10 +2,11 @@ import { useContext, useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import BookDetail from '../components/BookDetail';
-import GoToButton from '../components/GoToButton';
+// import GoToButton from '../components/GoToButton';
 import { AuthContext } from '../context/AuthContext';
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from '../config';
+import GoBackButton from '../components/GoBackButton';
 
 function Detail() {
   const [note, setNote] = useState("");
@@ -42,9 +43,10 @@ function Detail() {
       <Row className='justify-content-center py-5 mt-4'>
         <Col>
           <BookDetail />
-          <GoToButton path="/" element="home page" />
+          {/* <GoToButton path="/" element="home page" /> */}
+          <GoBackButton/>
           <Form>
-            <Form.Group className="mb-3">
+            <Form.Group className="my-3">
             <h5>Add a note and place the book on your rack</h5>
               <Form.Control type="text" placeholder="What would you like to remember about this book?" value={note} onChange={handleNoteChange}/>
             </Form.Group>

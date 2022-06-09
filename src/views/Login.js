@@ -46,7 +46,7 @@ function Login() {
             // value={password}
             />
           </Form.Group>
-            <Button type="primary" onClick={handleLogin}>Login</Button>
+            <Button type="submit" variant="primary" onClick={handleLogin}>Login</Button>
             </Form>
         </Col>
       </Row>

@@ -10,8 +10,11 @@ function FavButton() {
         size='lg'
         variant='outline-none'
         color='primary'
+        className="disabled"
         >
-        <Book className='text-primary'/>
+        <Book 
+        // className='text-primary'
+        />
     </Button>
     </>
   )

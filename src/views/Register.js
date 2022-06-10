@@ -48,7 +48,7 @@ function Register() {
             // value={password}
             />
           </Form.Group>
-            <Button type="primary" onClick={handleRegister}>Register</Button>
+            <Button type="submit" variant="primary" onClick={handleRegister}>Register</Button>
             </Form>
         </Col>
       </Row>

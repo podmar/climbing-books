@@ -3,7 +3,7 @@ import { Button, Container, Navbar, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import GoBackButton from './GoBackButton';
-import { Person, PersonFill } from 'react-bootstrap-icons';
+import { BoxArrowRight, Person, } from 'react-bootstrap-icons';
 
 function Nav() {
     const { user, setUser, logout } = useContext(AuthContext);
@@ -26,7 +26,7 @@ function Nav() {
                 size='lg'
                 className='d-flex'
                 onClick={logout}>
-                <PersonFill/>
+                <BoxArrowRight/>
               </Button> :
               <Button 
                 size='lg'

@@ -12,8 +12,8 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = (props) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const redirectTo = useNavigate();
-
   const register = async (email, password) => {
     console.log("email + password", email, password);
 
@@ -56,8 +56,10 @@ export const AuthContextProvider = (props) => {
       if (user) {
         // const uid = user.uid;
         setUser(user);
+        setLoading(false);
       } else {
         setUser(null);
+        setLoading(false);
       }
     });
   };
@@ -77,7 +79,9 @@ export const AuthContextProvider = (props) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, register, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, setUser, register, login, logout, loading }}
+    >
       {props.children}
     </AuthContext.Provider>
   );
